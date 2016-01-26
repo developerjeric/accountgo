@@ -84,7 +84,7 @@ namespace Services.Administration
 
         public void InitializeCompany()
         {
-            if (_company.Table.FirstOrDefault() == null)
+            if (_company.Table.ToList().FirstOrDefault() == null)
             {
                 Data.DbInitializerHelper.Initialize();
             }
